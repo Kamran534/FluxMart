@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="client/public/banner.png" alt="FlexMart Banner" width="800"/>
+  <img src="./client/public/banner.png" alt="FlexMart Banner" width="800"/>
 </div>
 
 # FlexMart - AI Powered Ecommerce Platform
