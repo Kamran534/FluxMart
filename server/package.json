@@ -1,0 +1,42 @@
+{
+  "name": "flexmart-server",
+  "version": "1.0.0",
+  "description": "An AI Powered Ecommerce Application server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "echo \"No build step required for Node.js server\" && exit 0",
+    "start": "node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "lint": "echo \"No linter configured\" && exit 0",
+    "lint:fix": "echo \"No linter configured\" && exit 0",
+    "test": "echo \"No tests specified\" && exit 0",
+    "test:watch": "echo \"No tests specified\" && exit 0",
+    "test:coverage": "echo \"No tests specified\" && exit 0",
+    "clean": "rm -rf dist build logs",
+    "format": "echo \"No formatter configured\" && exit 0",
+    "format:check": "echo \"No formatter configured\" && exit 0",
+    "type-check": "echo \"No TypeScript configured\" && exit 0"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ecommerce",
+    "ai",
+    "mern"
+  ],
+  "author": "Muhammad Kamran",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

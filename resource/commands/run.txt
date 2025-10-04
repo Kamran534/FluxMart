@@ -1,0 +1,22 @@
+1. project structure:
+flexmart-monorepo/
+├── package.json          # Root workspace with unified commands
+├── env.example          # Environment configuration template
+├── scripts/dev.js       # Custom development script
+├── README.md            # Comprehensive documentation
+├── client/              # Next.js frontend
+└── server/              # Express.js backend
+
+2. Command	What it does
+npm run dev	🚀 Start both server & client
+npm run build	🏗️ Build both applications
+npm run start	🚀 Start both in production
+npm run lint	🔍 Lint both codebases
+npm run test	🧪 Test both applications
+npm run clean	🧹 Clean build artifacts
+npm run setup	⚡ Install & build everything
+
+3. docker setup for server...
+cd server
+docker build -t flexmart-server .
+docker run -p 8080:8080 flexmart-server

@@ -1,0 +1,47 @@
+{
+  "name": "flexmart-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FlexMart - Your flexible marketplace solution",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run -w server dev\" \"npm run -w client dev\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\"",
+    "dev:client": "npm run -w client dev",
+    "dev:server": "npm run -w server dev",
+    "build": "npm run -w server build && npm run -w client build",
+    "build:client": "npm run -w client build",
+    "build:server": "npm run -w server build",
+    "start": "concurrently \"npm run -w server start\" \"npm run -w client start\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\"",
+    "start:client": "npm run -w client start",
+    "start:server": "npm run -w server start",
+    "start:prod": "concurrently \"npm run -w server start:prod\" \"npm run -w client start\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\"",
+    "lint": "npm run -w client lint && npm run -w server lint",
+    "lint:client": "npm run -w client lint",
+    "lint:server": "npm run -w server lint",
+    "lint:fix": "npm run -w client lint:fix && npm run -w server lint:fix",
+    "test": "npm run -w client test && npm run -w server test",
+    "test:client": "npm run -w client test",
+    "test:server": "npm run -w server test",
+    "clean": "npm run -w client clean && npm run -w server clean",
+    "clean:client": "npm run -w client clean",
+    "clean:server": "npm run -w server clean",
+    "clean:all": "npm run clean && rm -rf node_modules client/node_modules server/node_modules",
+    "install:all": "npm install",
+    "install:client": "npm install -w client",
+    "install:server": "npm install -w server",
+    "setup": "npm install && npm run build",
+    "type-check": "npm run -w client type-check && npm run -w server type-check",
+    "format": "npm run -w client format && npm run -w server format",
+    "format:check": "npm run -w client format:check && npm run -w server format:check"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
